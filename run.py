@@ -12,6 +12,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("project_portfolio_3_munchiies_hot_corner")
 
+
 def get_sales_info():
     """
     Get sales information from the user about the hot products
@@ -22,6 +23,20 @@ def get_sales_info():
     info_str = input("Enter required figures:")
     
     sales_info = info_str.split(",")
-    print(sales_info)
+    check_input(sales_info)
+
+
+def check_input(values):
+    """
+    Within the try part of the function converts all values within the string into integers and 
+    raises a ValueError if this cannot be done or the required number of values is not met.
+    """
+    try:
+        if len(values) != 6:
+            raise ValueError(
+                f"6 valid entries are required, you have entered {len(values)}"
+            )
+    except ValueError as e:
+        print(f"Invalid data format: {e}, please try again using only numbers.\n")
 
 get_sales_info()
