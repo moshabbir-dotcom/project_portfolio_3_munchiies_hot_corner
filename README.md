@@ -52,7 +52,16 @@ The project was deployed to GitHub Pages using the following procedure:
 * The page then refreshed.
 * The gihub pages section then had a link to the published page.
 
-<!--Delete everything below this before submission-->
+# CREDITS-
+* <!--Complete this section>
+
+# CONTENT & MEDIA-
+* All photos and marketing materials are copyright of the respective copyright holders and taken with permission of the trademark owner. All images were all compressed to aid in readme.md page load speed.
+
+# OPPORTUNITIES-
+* <!--Complete this section>
+
+<!--Delete everything below this before submission and after adherance-->
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome moshabbir-dotcom,
