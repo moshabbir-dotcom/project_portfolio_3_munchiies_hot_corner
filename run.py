@@ -20,6 +20,8 @@ def get_sales_info():
     print("NOTE: Order of products is Jumbo HotDog, Messy HotDog, Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n")
 
     info_str = input("Enter required figures:")
-    print(f"You have entered {info_str}")
+    
+    sales_info = info_str.split(",")
+    print(sales_info)
 
 get_sales_info()

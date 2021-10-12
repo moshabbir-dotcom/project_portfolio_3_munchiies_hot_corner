@@ -26,6 +26,12 @@
 # LANGUAGES-
 * [PYTHON] (https://en.wikipedia.org/wiki/Python_(programming_language))
 
+# LIBRARIES & PROGRAMS-
+* [Google Drive:](https://en.wikipedia.org/wiki/Google_Drive) Google drive was used to store the spreadsheet which was accessed by the app.
+* [Google API's:](https://en.wikipedia.org/wiki/Google_APIs) Google API's were used to validate access to the relevant worksheets and be able to edit them directly from the command line.
+* [TinyPNG](https://tinypng.com) TinyPNG was used to compress image sizes to be used in the readme.md file
+
+<!--Delete everything below this before submission-->
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome moshabbir-dotcom,
