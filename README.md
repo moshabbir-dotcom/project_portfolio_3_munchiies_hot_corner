@@ -13,7 +13,7 @@
 * In the event the preparation can be speeded up by using a microwave instead of the slower heating methods, product quality is detrimentally affected which impacts customer perception.
 * Constantly having hot products being prepared results in excess wastage at the end of the day which impacts bottoms line profit.
 * The business owner is concerned that he may be ordering too much or too little stock from suppliers and collation of the data to make a strategic decision can be very time consuming for a business that trades 12hrs per day with a maximum of 3 staff at any given point.
-### Menu
+### Menu <!--Complete this section>
 <img src="/assets/images/############.jpg">
 ### Process flowchart mockup
 <img src="/assets/images/############.jpg">
@@ -30,6 +30,27 @@
 * [Google Drive:](https://en.wikipedia.org/wiki/Google_Drive) Google drive was used to store the spreadsheet which was accessed by the app.
 * [Google API's:](https://en.wikipedia.org/wiki/Google_APIs) Google API's were used to validate access to the relevant worksheets and be able to edit them directly from the command line.
 * [TinyPNG](https://tinypng.com) TinyPNG was used to compress image sizes to be used in the readme.md file
+* [NodeJS](https://en.wikipedia.org/wiki/Node.js) NodeJS used as part of the buildpack used when deploying project to Heroku.
+
+# TESTING-
+* Tested through <!--Complete this section>
+<img src="/assets/images/.png">
+
+## Bugs- 
+* <!--Complete this section>
+
+# DEPLOYMENT-
+The project was deployed in 2 stages, the first of which being on Heroku and the second being on Github pages and this is detailed below:
+
+The project was deployed to Heroku using the following procedure:
+* <!--Complete this section>
+The project was deployed to GitHub Pages using the following procedure:
+* Logged in to github and selected the github repository required.
+* Selected the settings option.
+* Went to the github pages section.
+* Under the source tab the dropdown "none" was changed to "master branch".
+* The page then refreshed.
+* The gihub pages section then had a link to the published page.
 
 <!--Delete everything below this before submission-->
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
