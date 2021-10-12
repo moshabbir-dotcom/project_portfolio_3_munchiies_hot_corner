@@ -12,8 +12,14 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("project_portfolio_3_munchiies_hot_corner")
 
-sales = SHEET.worksheet("sales")
+def get_sales_info():
+    """
+    Get sales information from the user about the hot products
+    """
+    print("Please enter daily sales numbers for all Hot Corner products separated with a comma\n")
+    print("NOTE: Order of products is Jumbo HotDog, Messy HotDog, Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n")
 
-data = sales.get_all_values()
+    info_str = input("Enter required figures:")
+    print(f"You have entered {info_str}")
 
-print(data)
+get_sales_info()
