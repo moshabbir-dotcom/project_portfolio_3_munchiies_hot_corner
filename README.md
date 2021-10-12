@@ -6,16 +6,13 @@
 * The owner desires to minimise wastage whilst ensuring product quality.
 * The owner requires to be able to respond to changes in sales demand & seasonality without having money tied up in excess stock for too long a duration or unfulfilled sales due to underordering from supplier.
 ## Site Owner Objectives-
-* To make a simple and intuative game that can be used to aid short term memory recall.
-* Must be familiar enough to play for people who may not be computer literate.
-* Ensure contrast and display is simple but attention grabbing whilst providing information needed to user about the game itself.
-* Be functional across a variety of device sizes. (Minimum screen size is assumed to be 375px as per the majority of hardware manufacturers use this size as the minimum.)
-# DESIGN-
-* Typography used is Oswald with a font weight of 600 to be easily readable on the dark background with a backup font of Sans Serif.
-* Colour scheme has been chosen to be contrasting with light/dark colours in the background image with a simple backup colour of black in order to not clash with the red back of the playing card or the simple monochrome of the rorshach images themselves.
-* Font awesome icon has been used to add decoration to the limited text on the html pages. 
-
+* The application should provide extrapolated data from an inputted dataset whilst logging data into an accessible format for the business owner to understand and make subsequent business decisions.
 ## Background-
+* Munchiies is an independant dessert parlour based in the RG6 area of Berkshire. Whilst predominantly selling cold products there are also hot items on the menu namely under the section of the menu called "Hot Corner".
+* The business owner has stated that this part of the menu can be problematic to manage in that the products can take time to prepare which can cause excessive wait times for customers which is exacerbated when the business has moved more towards online delivery platforms such as Deliveroo, Just Eat and Uber-Eats etc... which rate business on speed of service and compliance to those benchmarked metrics.
+* In the event the preparation can be speeded up by using a microwave instead of the slower heating methods, product quality is detrimentally affected which impacts customer perception.
+* Constantly having hot products being prepared results in excess wastage at the end of the day which impacts bottoms line profit.
+* The business owner is concerned that he may be ordering too much or too little stock from suppliers and collation of the data to make a strategic decision can be very time consuming for a business that trades 12hrs per day with a maximum of 3 staff at any given point.
 ### Menu
 <img src="/assets/images/############.jpg">
 ### Process flowchart mockup
