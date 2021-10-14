@@ -62,6 +62,7 @@ The project was deployed to GitHub Pages using the following procedure:
 # OPPORTUNITIES-
 * The spreadsheet can be expanded to hold more information allowing for pre-preparation on other hot products such as waffles and crepes that are hot parts of desserts. This would in turn aid turnover speed on dessert products also.
 * There is another opportunity whereby over a period of time as more data is obtained that code can be rewritten to allow for usage plus safety stock to prevent "out of stocks".
+* I would have liked to have individual input requests for each product's sales in order to make the interface more user friendly and would have linked that by appending not the entire row but the INDIVIDUAL entry in the list within the row. This is soemthing I was not able to do due to the lack of time left till submission but is definatley something I will be exploring as I have already been asked to add this functionality for the business after my course is complete.
 
 <!--Delete everything below this before submission and after adherance-->
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)

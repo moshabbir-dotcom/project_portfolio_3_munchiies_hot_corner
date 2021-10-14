@@ -57,6 +57,15 @@ def update_sales_tab(data):
     sales_worksheet.append_row(data)
     print("Sales tab updated on Google Drive!\n")
 
+def update_overunder_tab(data):
+    """
+    Update overunder worksheet, add new row with the list data provided
+    """
+    print("Overunder tab updating on Google Drive...\n")
+    overunder_worksheet = SHEET.worksheet("overunder")
+    overunder_worksheet.append_row(data)
+    print("Overunder tab updated on Google Drive!\n")
+
 def calculate_over_under(sales_row):
     """
     Compare sales with amounts of product items prepared and calculate the over/underage to indicate wasted product vs wait time.
@@ -83,6 +92,7 @@ def main():
     sales_info = [int(num) for num in info]
     update_sales_tab(sales_info)
     new_difference_data = calculate_over_under(sales_info)
+    update_overunder_tab(new_difference_data)
 
     print(new_difference_data)
 
