@@ -17,14 +17,18 @@ def get_sales_info():
     """
     Get sales information from the user about the hot products
     """
-    print("Please enter daily sales numbers for all Hot Corner products separated with a comma\n")
-    print("NOTE: Order of products is Jumbo HotDog, Messy HotDog, Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n")
+    while True:
+        print("Please enter daily sales numbers for all Hot Corner products separated with a comma\n")
+        print("NOTE: Order of products is Jumbo HotDog, Messy HotDog, Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n")
 
-    info_str = input("Enter required figures:")
+        info_str = input("Enter required figures:")
     
-    sales_info = info_str.split(",")
-    check_input(sales_info)
+        sales_info = info_str.split(",")
+        if check_input(sales_info):
+            print("Everything works!")
+            break
 
+    return sales_info
 
 def check_input(values):
     """
@@ -39,5 +43,8 @@ def check_input(values):
             )
     except ValueError as e:
         print(f"Invalid data format: {e}, please try again using only numbers.\n")
+        return False
 
-get_sales_info()
+    return True
+
+info = get_sales_info()
