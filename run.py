@@ -15,7 +15,7 @@ SHEET = GSPREAD_CLIENT.open("project_portfolio_3_munchiies_hot_corner")
 
 def get_sales_info():
     """
-    Get sales information from the user about the hot products
+    Get sales information from the user about the hot products and will continue to run until info entered is valid.
     """
     while True:
         print("Please enter daily sales numbers for all Hot Corner products separated with a comma\n")
@@ -25,7 +25,7 @@ def get_sales_info():
     
         sales_info = info_str.split(",")
         if check_input(sales_info):
-            print("Everything works!")
+            print("Thank You...")
             break
 
     return sales_info
@@ -47,4 +47,16 @@ def check_input(values):
 
     return True
 
+def update_sales_tab(data):
+    """
+    Update sales worksheet in the master Google spreadsheet and add a new row relating to a daily entry with the data entered by the user
+    """
+    print("Sales tab updating on Google Drive...\n")
+    sales_worksheet = SHEET.worksheet("sales")
+    sales_worksheet.append_row(data)
+    print("Sales tab updated on Google Drive!\n")
+
 info = get_sales_info()
+sales_info = [int(num) for num in info]
+update_sales_tab(sales_info)
+print(info)
