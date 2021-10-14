@@ -32,6 +32,7 @@ def check_input(values):
     raises a ValueError if this cannot be done or the required number of values is not met.
     """
     try:
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
                 f"6 valid entries are required, you have entered {len(values)}"
