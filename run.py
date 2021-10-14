@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -56,7 +57,26 @@ def update_sales_tab(data):
     sales_worksheet.append_row(data)
     print("Sales tab updated on Google Drive!\n")
 
-info = get_sales_info()
-sales_info = [int(num) for num in info]
-update_sales_tab(sales_info)
-print(info)
+def calculate_over_under(sales_row):
+    """
+    Compare sales with amounts of product items prepared and calculate the over/underage to indicate wasted product vs wait time.
+    The difference is the sales data subtracted from the prepared stock on hand:
+    - Positive number indicates overage at the end of the day resulting in wastage.
+    - Negative number indicates customers who had to wait for preparation after .
+    """
+    print("Generating over/underage data...\n")
+    stock = SHEET.worksheet("stockonhand").get_all_values()
+    stock_row = stock[-1]
+    print(stock_row)
+
+def main():
+    """
+    This is to run all program functions within one main function as per good practice
+    """
+    info = get_sales_info()
+    sales_info = [int(num) for num in info]
+    update_sales_tab(sales_info)
+    calculate_over_under(sales_info)
+
+print("Munchiies Stock Control System\n")
+main()
