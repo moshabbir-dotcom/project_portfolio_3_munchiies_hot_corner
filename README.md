@@ -52,14 +52,16 @@ The project was deployed to GitHub Pages using the following procedure:
 * The page then refreshed.
 * The gihub pages section then had a link to the published page.
 
-# CREDITS-
-* <!--Complete this section>
+# CREDITS-<!--Complete this section>
+* My mentor Can Sucullu who helped me break down my project idea into the key aspects that I had to ensure were part of the final submission.
+* Code Institute's "Love Sandwiches" walkthrough which had code that I was able to adapt for use in my own project.#######
 
 # CONTENT & MEDIA-
 * All photos and marketing materials are copyright of the respective copyright holders and taken with permission of the trademark owner. All images were all compressed to aid in readme.md page load speed.
 
 # OPPORTUNITIES-
-* <!--Complete this section>
+* The spreadsheet can be expanded to hold more information allowing for pre-preparation on other hot products such as waffles and crepes that are hot parts of desserts. This would in turn aid turnover speed on dessert products also.
+* There is another opportunity whereby over a period of time as more data is obtained that code can be rewritten to allow for usage plus safety stock to prevent "out of stocks".
 
 <!--Delete everything below this before submission and after adherance-->
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)

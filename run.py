@@ -67,7 +67,13 @@ def calculate_over_under(sales_row):
     print("Generating over/underage data...\n")
     stock = SHEET.worksheet("stockonhand").get_all_values()
     stock_row = stock[-1]
-    print(stock_row)
+
+    difference_data = []
+    for stock, sales in zip(stock_row, sales_row):
+        difference = int(stock) - sales
+        difference_data.append(difference)
+
+    return difference_data
 
 def main():
     """
@@ -76,7 +82,9 @@ def main():
     info = get_sales_info()
     sales_info = [int(num) for num in info]
     update_sales_tab(sales_info)
-    calculate_over_under(sales_info)
+    new_difference_data = calculate_over_under(sales_info)
+
+    print(new_difference_data)
 
 print("Munchiies Stock Control System\n")
 main()
