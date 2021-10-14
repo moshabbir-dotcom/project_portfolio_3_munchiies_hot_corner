@@ -66,6 +66,15 @@ def update_overunder_tab(data):
     overunder_worksheet.append_row(data)
     print("Overunder tab updated on Google Drive!\n")
 
+def update_prepsummary_tab(data):
+    """
+    Update prepsummary worksheet, add new row with the list data provided
+    """
+    print("Daily prep summary tab updating on Google Drive...\n")
+    overunder_worksheet = SHEET.worksheet("prepsummary")
+    overunder_worksheet.append_row(data)
+    print("Daily prep summary tab updated on Google Drive!\n")
+
 def calculate_over_under(sales_row):
     """
     Compare sales with amounts of product items prepared and calculate the over/underage to indicate wasted product vs wait time.
@@ -99,6 +108,21 @@ def get_last_3_days_sales():
 
     return columns
 
+def calculate_daily_prep(data):
+    """
+    Calculate the 3 day average stock for each item type, adding 5% to generate prep amounts for each of the 6 Hot Corner Products rounding the result to the nearest whole number.
+    """
+    print("Generating product preparation totals...\n")
+    new_prep_data = []
+
+    for column in data:
+        int_column = [int(num) for num in column]
+        average = sum(int_column) / len(int_column)
+        prep_num = average * 1.05
+        new_prep_data.append(round(prep_num))
+
+    return (new_prep_data)
+
 def main():
     """
     This is to run all program functions within one main function as per good practice
@@ -108,10 +132,11 @@ def main():
     update_sales_tab(sales_info)
     new_difference_data = calculate_over_under(sales_info)
     update_overunder_tab(new_difference_data)
+    average_3_days = get_last_3_days_sales()
+    prep_data = calculate_daily_prep(average_3_days)
+    update_prepsummary_tab(prep_data)
 
-    print(new_difference_data)
 
 print("Munchiies Stock Control System\n")
 main()
 
-average_3_days = get_last_3_days_sales()
