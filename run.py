@@ -84,6 +84,21 @@ def calculate_over_under(sales_row):
 
     return difference_data
 
+def get_last_3_days_sales():
+    """
+    Collects columns of data from sales worksheet, collecting
+    the last 3 days worth of sales for each of the 6 Hot Products and returns the data
+    as a list of lists.
+    """
+    sales = SHEET.worksheet("sales")
+
+    columns = []
+    for ind in range(1, 7):
+        column = sales.col_values(ind)
+        columns.append(column[-3:])
+
+    return columns
+
 def main():
     """
     This is to run all program functions within one main function as per good practice
@@ -98,3 +113,5 @@ def main():
 
 print("Munchiies Stock Control System\n")
 main()
+
+average_3_days = get_last_3_days_sales()
