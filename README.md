@@ -34,7 +34,10 @@
 * [CodeBeautify](https://codebeautify.org/python-formatter-beautifier) Used to tidy the python 3.6 code to be according to presentation standards.
 
 # TESTING-
-* Tested through <!--Complete this section>
+* Tested through [ExtendsClass.com](https://www.extendsclass.com/python.html) which showed there was no error with the code itself although did show that the gspread module was not found which is not the case in the actual file itself.
+<img src="/assets/images/.png">
+
+* Run through the [PEP8 online checker](http://www.pep8online.com/checkresult) which showed no issues with formatting and was used to help meet coding convention.
 <img src="/assets/images/.png">
 
 ## Bugs- 
