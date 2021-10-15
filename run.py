@@ -5,8 +5,8 @@ from pprint import pprint
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
+    "https://www.googleapis.com/auth/drive",
+]
 
 CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
@@ -19,11 +19,15 @@ def get_sales_info():
     Get sales information from the user about the hot products and will continue to run until info entered is valid.
     """
     while True:
-        print("Please enter daily sales numbers for all Hot Corner products separated with a comma\n")
-        print("NOTE: Order of products is Jumbo HotDog, Messy HotDog, Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n")
+        print(
+            "Please enter daily sales numbers for all Hot Corner products separated with a comma\n"
+        )
+        print(
+            "NOTE: Order of products is Jumbo HotDog, Messy HotDog, Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n"
+        )
 
         info_str = input("Enter required figures:")
-    
+
         sales_info = info_str.split(",")
         if check_input(sales_info):
             print("Thank You...")
@@ -31,9 +35,10 @@ def get_sales_info():
 
     return sales_info
 
+
 def check_input(values):
     """
-    Within the try part of the function converts all values within the string into integers and 
+    Within the try part of the function converts all values within the string into integers and
     raises a ValueError if this cannot be done or the required number of values is not met.
     """
     try:
@@ -48,6 +53,7 @@ def check_input(values):
 
     return True
 
+
 def update_sales_tab(data):
     """
     Update sales worksheet in the master Google spreadsheet and add a new row relating to a daily entry with the data entered by the user
@@ -56,6 +62,7 @@ def update_sales_tab(data):
     sales_worksheet = SHEET.worksheet("sales")
     sales_worksheet.append_row(data)
     print("Sales tab updated on Google Drive!\n")
+
 
 def update_overunder_tab(data):
     """
@@ -66,6 +73,7 @@ def update_overunder_tab(data):
     overunder_worksheet.append_row(data)
     print("Overunder tab updated on Google Drive!\n")
 
+
 def update_prepsummary_tab(data):
     """
     Update prepsummary worksheet, add new row with the list data provided
@@ -75,6 +83,7 @@ def update_prepsummary_tab(data):
     overunder_worksheet.append_row(data)
     print("Daily prep summary tab updated on Google Drive!\n")
 
+
 def update_fortnightlyorder_tab(data):
     """
     Update fortnightly order worksheet, add new row with the new order amounts.
@@ -82,7 +91,8 @@ def update_fortnightlyorder_tab(data):
     print("Fortnightly order tab updating on Google Drive...\n")
     overunder_worksheet = SHEET.worksheet("fortnightlyordertotals")
     overunder_worksheet.append_row(data)
-    print("Fortnightly order tab updated on Google Drive!\n")	
+    print("Fortnightly order tab updated on Google Drive!\n")
+
 
 def calculate_over_under(sales_row):
     """
@@ -102,6 +112,7 @@ def calculate_over_under(sales_row):
 
     return difference_data
 
+
 def get_last_3_days_sales():
     """
     Collects columns of data from sales worksheet, collecting
@@ -117,6 +128,7 @@ def get_last_3_days_sales():
 
     return columns
 
+
 def calculate_daily_prep(data):
     """
     Calculate the 3 day average stock for each item type, adding 5% to generate prep amounts for each of the 6 Hot Corner Products rounding the result to the nearest whole number.
@@ -130,7 +142,8 @@ def calculate_daily_prep(data):
         prep_num = average * 1.05
         new_prep_data.append(round(prep_num))
 
-    return (new_prep_data)
+    return new_prep_data
+
 
 def get_last_2_weeks_sales():
     """
@@ -144,7 +157,8 @@ def get_last_2_weeks_sales():
         order_column = sales.col_values(ind)
         order_columns.append(order_column[-14:])
 
-    return (order_columns)
+    return order_columns
+
 
 def calculate_fortnightly_order(data):
     """
@@ -158,7 +172,8 @@ def calculate_fortnightly_order(data):
         order_total = sum(int_order_column)
         new_order_total.append(round(order_total))
 
-    return (new_order_total)
+    return new_order_total
+
 
 def main():
     """
@@ -181,4 +196,3 @@ def main():
 
 print("Munchiies Stock Control System\n")
 main()
-
