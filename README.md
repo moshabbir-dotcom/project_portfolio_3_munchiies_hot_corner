@@ -14,9 +14,9 @@
 * Constantly having hot products being prepared results in excess wastage at the end of the day which impacts bottoms line profit.
 * The business owner is concerned that he may be ordering too much or too little stock from suppliers and collation of the data to make a strategic decision can be very time consuming for a business that trades 12hrs per day with a maximum of 3 staff at any given point.
 ### Menu <!--Complete this section>
-<img src="/assets/images/############.jpg">
+<img src="/assets/images/munchiiesmenu.jpeg">
 ### Process flowchart mockup
-<img src="/assets/images/############.jpg">
+<img src="/assets/images/pp3flowdiagram.jpeg">
 
 # FEATURES
 * Import survey results from the terminal to the google spreadsheet and individual worksheets within it.
@@ -35,10 +35,10 @@
 
 # TESTING-
 * Tested through [ExtendsClass.com](https://www.extendsclass.com/python.html) which showed there was no error with the code itself although did show that the gspread module was not found which is not the case in the actual file itself.
-<img src="/assets/extendsclasspythontest.png">
+<img src="assets/images/extendsclasspythontest.png">
 
 * Run through the [PEP8 online checker](http://www.pep8online.com/checkresult) which showed no issues with formatting and was used to help meet coding convention.
-<img src="/assets/pep8validation.png">
+<img src="assets/images/pep8validation.png">
 
 ## Bugs- 
 * <!--Complete this section>
