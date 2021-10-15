@@ -31,6 +31,7 @@
 * [Google API's:](https://en.wikipedia.org/wiki/Google_APIs) Google API's were used to validate access to the relevant worksheets and be able to edit them directly from the command line.
 * [TinyPNG](https://tinypng.com) TinyPNG was used to compress image sizes to be used in the readme.md file
 * [NodeJS](https://en.wikipedia.org/wiki/Node.js) NodeJS used as part of the buildpack used when deploying project to Heroku.
+* [CodeBeautify](https://codebeautify.org/python-formatter-beautifier) Used to tidy the python 3.6 code to be according to presentation standards.
 
 # TESTING-
 * Tested through <!--Complete this section>
