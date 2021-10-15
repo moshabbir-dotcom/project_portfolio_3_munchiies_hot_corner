@@ -35,10 +35,10 @@
 
 # TESTING-
 * Tested through [ExtendsClass.com](https://www.extendsclass.com/python.html) which showed there was no error with the code itself although did show that the gspread module was not found which is not the case in the actual file itself.
-<img src="/assets/images/.png">
+<img src="/assets/extendsclasspythontest.png">
 
 * Run through the [PEP8 online checker](http://www.pep8online.com/checkresult) which showed no issues with formatting and was used to help meet coding convention.
-<img src="/assets/images/.png">
+<img src="/assets/pep8validation.png">
 
 ## Bugs- 
 * <!--Complete this section>
