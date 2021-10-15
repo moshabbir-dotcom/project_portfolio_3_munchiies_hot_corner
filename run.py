@@ -123,6 +123,20 @@ def calculate_daily_prep(data):
 
     return (new_prep_data)
 
+def get_last_2_weeks_sales():
+    """
+    Collects columns of data from sales worksheet, collecting
+    the last 2 weeks sales data.
+    """
+    sales = SHEET.worksheet("sales")
+
+    order_columns = []
+    for ind in range(1, 15):
+        order_column = sales.col_values(ind)
+        order_columns.append(column[-14:])
+
+    return (order_columns)
+
 def main():
     """
     This is to run all program functions within one main function as per good practice
