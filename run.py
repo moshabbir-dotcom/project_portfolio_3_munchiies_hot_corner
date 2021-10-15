@@ -75,6 +75,15 @@ def update_prepsummary_tab(data):
     overunder_worksheet.append_row(data)
     print("Daily prep summary tab updated on Google Drive!\n")
 
+def update_fortnightlyorder_tab(data):
+    """
+    Update fortnightly order worksheet, add new row with the new order amounts.
+    """
+    print("Fortnightly order tab updating on Google Drive...\n")
+    overunder_worksheet = SHEET.worksheet("fortnightlyordertotals")
+    overunder_worksheet.append_row(data)
+    print("Fortnightly order tab updated on Google Drive!\n")	
+
 def calculate_over_under(sales_row):
     """
     Compare sales with amounts of product items prepared and calculate the over/underage to indicate wasted product vs wait time.
@@ -133,9 +142,23 @@ def get_last_2_weeks_sales():
     order_columns = []
     for ind in range(1, 15):
         order_column = sales.col_values(ind)
-        order_columns.append(column[-14:])
+        order_columns.append(order_column[-14:])
 
     return (order_columns)
+
+def calculate_fortnightly_order(data):
+    """
+    Calculate the 14 day stock usage for each Hot Corner product rounding the result to the nearest whole number.
+    """
+    print("Generating fornightly product order totals...\n")
+    new_order_total = []
+
+    for order_column in data:
+        int_order_column = [int(num) for num in order_column]
+        order_total = sum(int_order_column)
+        new_order_total.append(round(order_total))
+
+    return (new_order_total)
 
 def main():
     """
@@ -146,9 +169,14 @@ def main():
     update_sales_tab(sales_info)
     new_difference_data = calculate_over_under(sales_info)
     update_overunder_tab(new_difference_data)
+
     average_3_days = get_last_3_days_sales()
     prep_data = calculate_daily_prep(average_3_days)
     update_prepsummary_tab(prep_data)
+
+    total_14_days = get_last_2_weeks_sales()
+    order_total = calculate_fortnightly_order(total_14_days)
+    update_fortnightlyorder_tab(order_total)
 
 
 print("Munchiies Stock Control System\n")
