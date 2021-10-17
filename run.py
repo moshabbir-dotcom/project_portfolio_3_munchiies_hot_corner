@@ -31,7 +31,7 @@ def get_sales_info():
             Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n"
         )
 
-        info_str = input("Enter required figures:")
+        info_str = input("Enter required figures:\n")
 
         sales_info = info_str.split(",")
         if check_input(sales_info):
