@@ -50,6 +50,7 @@
 
 ## Bugs- 
 * The app was crashing on running the run.py file and and although the syntax was correct I realised i had made a mistake when defining the new order total list that would be generated as part of the function in that i had used the WRONG parentheses.
+* After deployment using the auto deplyment function on heroku when testing the app the spacing on interface text was offline. As a result the deployment was moved to manual for 2 reasons; 1 in order to rectify the syntax and be happy before the next deployment to Heroku and 2; In order to ensure that only the final submitted version would be on heroku.
 
 ### DEPLOYMENT-
 The project was deployed in 2 stages, the first of which being on Heroku and the second being on Github pages and this is detailed below:
@@ -65,7 +66,7 @@ The project was deployed to Heroku using the following procedure in the 1st stag
 * Then hit "Add buildpack" again and select "NodeJS" this time and again "Save Changes" ensuring that buildpacks are listed with Python being first.
 * Scroll up to the "Deploy" section and selct the deploy method which in this instance was "Github"
 * Once connected to Github search for the repository name of project_portfolio_3_munchiies_hot_corner and connect.
-* Hit the "Enable automatic deploys" option in order for Heroku to take into account any further changes that may be made on Github.
+* Hit the "Enable manual deploys" option in order for Heroku to take into account only the last manual deployment made before submission.
 
 The project was deployed to GitHub Pages using the following procedure in the 2nd stage:
 * Logged in to github and selected the github repository required.
