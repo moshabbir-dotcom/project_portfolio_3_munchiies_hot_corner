@@ -51,6 +51,7 @@
 ## Bugs- 
 * The app was crashing on running the run.py file and and although the syntax was correct I realised i had made a mistake when defining the new order total list that would be generated as part of the function in that i had used the WRONG parentheses.
 * After deployment using the auto deplyment function on heroku when testing the app the spacing on interface text was offline. As a result the deployment was moved to manual for 2 reasons; 1 in order to rectify the syntax and be happy before the next deployment to Heroku and 2; In order to ensure that only the final submitted version would be on heroku.
+* The spacing issue was not able to be rectified as when attempting to do so caused a run error. This was left in place in order to be able to submit a functioning application although is something I would need to understand in order to prevent during future heroku deployments.
 
 ### DEPLOYMENT-
 The project was deployed in 2 stages, the first of which being on Heroku and the second being on Github pages and this is detailed below:

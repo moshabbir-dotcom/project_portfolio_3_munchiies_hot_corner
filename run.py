@@ -22,12 +22,12 @@ def get_sales_info():
     """
     while True:
         print(
-            "Please enter daily sales numbers for
-            all Hot Corner products
+            "Please enter daily sales numbers for\
+            all Hot Corner products\
             separated with a comma\n"
         )
         print(
-            "NOTE: Order of products is Jumbo HotDog, Messy HotDog,
+            "NOTE: Order of products is Jumbo HotDog, Messy HotDog,\
             Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n"
         )
 
@@ -197,7 +197,7 @@ def calculate_fortnightly_order(data):
 
 def main():
     """
-    This is to run all program functions within/
+    This is to run all program functions within
     one main function as per good practice
     """
     info = get_sales_info()
