@@ -54,9 +54,20 @@
 ### DEPLOYMENT-
 The project was deployed in 2 stages, the first of which being on Heroku and the second being on Github pages and this is detailed below:
 
-The project was deployed to Heroku using the following procedure:
-* <!--Complete this section>
-The project was deployed to GitHub Pages using the following procedure:
+The project was deployed to Heroku using the following procedure in the 1st stage:
+* Pip3 freeze > requirements.txt' in the terminal in order to ensure that heroku installs the dependancies required for the application to run on the heroku platform.
+* Once logged into Heroku click "Create New App"
+* Enter project name of project-portfolio-3-munchiies and select the region of Europe from the dropdown menu
+* Select "CreateApp"
+* Under the "Settings" option go to the "Config Vars" section and enter the key as PORT in uppercase and the value as being 8000 after which hit "Add".
+* Under the "Settings" option go to the "Config Vars" section and enter the key as CREDS in uppercase and the value as being the entire creds.json file copied across after which hit "Add".
+* Scroll down to "Add buildpack" and select "Python" then "Save Changes"
+* Then hit "Add buildpack" again and select "NodeJS" this time and again "Save Changes" ensuring that buildpacks are listed with Python being first.
+* Scroll up to the "Deploy" section and selct the deploy method which in this instance was "Github"
+* Once connected to Github search for the repository name of project_portfolio_3_munchiies_hot_corner and connect.
+* Hit the "Enable automatic deploys" option in order for Heroku to take into account any further changes that may be made on Github.
+
+The project was deployed to GitHub Pages using the following procedure in the 2nd stage:
 * Logged in to github and selected the github repository required.
 * Selected the settings option.
 * Went to the github pages section.
