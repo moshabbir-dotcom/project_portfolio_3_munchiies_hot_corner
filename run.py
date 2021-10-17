@@ -18,6 +18,7 @@ def get_sales_info():
     Get sales information from the user \
     about the hot products and will continue\
     to run until info entered is valid.
+    Taken from love sandwiches walkthrough
     """
     while True:
         print(
@@ -46,6 +47,7 @@ def check_input(values):
     all values within the string into integers and
     raises a ValueError if this cannot be done or/
     the required number of values is not met.
+    Taken from love sandwiches walkthrough
     """
     try:
         [int(value) for value in values]

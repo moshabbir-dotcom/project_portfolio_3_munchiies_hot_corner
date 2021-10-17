@@ -35,6 +35,13 @@
 * [CodeBeautify](https://codebeautify.org/python-formatter-beautifier) Used to tidy the python 3.6 code to be according to presentation standards.
 
 ### TESTING-
+* Each worksheet within the master spreadsheet is able to be accessed and or updated by the application and below are screenshots of the the spreadsheet during testing.
+<img src="assets/images/salestab.png">
+<img src="assets/images/overundertab.png">
+<img src="assets/images/stockonhandtab.png">
+<img src="assets/images/prepsummarytab.png">
+<img src="assets/images/fortnightlyordertab.png">
+
 * Tested through [ExtendsClass.com](https://www.extendsclass.com/python.html) which showed there was no error with the code itself although did show that the gspread module was not found which is not the case in the actual file itself.
 <img src="assets/images/extendsclasspythontest.png">
 
