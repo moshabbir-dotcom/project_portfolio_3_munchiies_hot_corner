@@ -49,7 +49,7 @@
 <img src="assets/images/pep8validation.png">
 
 ## Bugs- 
-* <!--Complete this section>
+* The app was crashing on running the run.py file and and although the syntax was correct I realised i had made a mistake when defining the new order total list that would be generated as part of the function in that i had used the WRONG parentheses.
 
 ### DEPLOYMENT-
 The project was deployed in 2 stages, the first of which being on Heroku and the second being on Github pages and this is detailed below:
@@ -75,9 +75,10 @@ The project was deployed to GitHub Pages using the following procedure in the 2n
 * The page then refreshed.
 * The gihub pages section then had a link to the published page.
 
-### CREDITS-<!--Complete this section>
+### CREDITS-
 * My mentor Can Sucullu who helped me break down my project idea into the key aspects that I had to ensure were part of the final submission.
 * Code Institute's "Love Sandwiches" walkthrough which had code that I was able to adapt for use in my own project namely one of each i of the "get" "calculate" & "update" functions which once understood were rewritten to be applicable to this project requirements and functionality.
+* Lastly I would like to thank Adill Bashir who when I asked (after 3hrs!!) to help me identify the issue i was facing with returning the new order total list did NOT help me and just gave me the motivation in that I was more than able to find the error myself after sleeping on it! It worked!
 
 ### CONTENT & MEDIA-
 * All photos and marketing materials are copyright of the respective copyright holders and taken with permission of the trademark owner. All images were all compressed to aid in readme.md page load speed.
@@ -87,36 +88,3 @@ The project was deployed to GitHub Pages using the following procedure in the 2n
 * There is another opportunity whereby over a period of time as more data is obtained that code can be rewritten to allow for usage plus safety stock to prevent "out of stocks".
 * I would have liked to have individual input requests for each product's sales in order to make the interface more user friendly and would have linked that by appending not the entire row but the INDIVIDUAL entry in the list within the row. This is soemthing I was not able to do due to the lack of time left till submission but is definatley something I will be exploring as I have already been asked to add this functionality for the business after my course is complete.
 * I would have like to have been confident enough to be able to refactor the code to combine functionality of the similar functions but as I am only just understanding the long hand syntax I would like to embed this in my mind with regards to keeping functions individual for the moment until I am able to spend more time practising code refactoring.
-
-<!--Delete everything below this before submission and after adherance-->
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome moshabbir-dotcom,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
