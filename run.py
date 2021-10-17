@@ -22,12 +22,12 @@ def get_sales_info():
     """
     while True:
         print(
-            "Please enter daily sales numbers for\
-            all Hot Corner products\
+            "Please enter daily sales numbers for
+            all Hot Corner products
             separated with a comma\n"
         )
         print(
-            "NOTE: Order of products is Jumbo HotDog, Messy HotDog,\
+            "NOTE: Order of products is Jumbo HotDog, Messy HotDog,
             Waffle Dog, Cheesy Nachos, Messy Nachos, Messy Fries\n"
         )
 
@@ -43,9 +43,9 @@ def get_sales_info():
 
 def check_input(values):
     """
-    Within the try part of the function converts/
+    Within the try part of the function converts
     all values within the string into integers and
-    raises a ValueError if this cannot be done or/
+    raises a ValueError if this cannot be done or
     the required number of values is not met.
     Taken from love sandwiches walkthrough
     """
@@ -56,7 +56,7 @@ def check_input(values):
                 f"6 valid entries are required, you have entered {len(values)}"
             )
     except ValueError as e:
-        print(f"Invalid data format: {e},\
+        print(f"Invalid data format: {e},
         please try again using only numbers.\n")
         return False
 
