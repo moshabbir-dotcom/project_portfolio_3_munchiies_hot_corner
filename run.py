@@ -15,15 +15,15 @@ SHEET = GSPREAD_CLIENT.open("project_portfolio_3_munchiies_hot_corner")
 
 def get_sales_info():
     """
-    Get sales information from the user \
-    about the hot products and will continue\
+    Get sales information from the user
+    about the hot products and will continue
     to run until info entered is valid.
     Taken from love sandwiches walkthrough
     """
     while True:
         print(
-            "Please enter daily sales numbers for \
-            all Hot Corner products \
+            "Please enter daily sales numbers for\
+            all Hot Corner products\
             separated with a comma\n"
         )
         print(
@@ -65,8 +65,8 @@ def check_input(values):
 
 def update_sales_tab(data):
     """
-    Update sales worksheet in the master Google/
-    spreadsheet and add a new row relating to/
+    Update sales worksheet in the master Google
+    spreadsheet and add a new row relating to
     a daily entry with the data entered by the user
     """
     print("Sales tab updating on Google Drive...\n")
@@ -107,15 +107,15 @@ def update_fortnightlyorder_tab(data):
 
 def calculate_over_under(sales_row):
     """
-    Compare sales with amounts of product items prepared/
-    and calculate the over/underage to indicate/
+    Compare sales with amounts of product items prepared
+    and calculate the over/underage to indicate
     wasted product vs wait time.
-    The difference is the sales data subtracted/
+    The difference is the sales data subtracted
     from the prepared stock on hand:
-    - Positive number indicates overage at the/
+    - Positive number indicates overage at the
     end of the day resulting in wastage.
-    - Negative number indicates customers who/
-    had to wait for preparation after .
+    - Negative number indicates customers who
+    had to wait longer for preparation.
     """
     print("Generating over/underage data...\n")
     stock = SHEET.worksheet("stockonhand").get_all_values()
@@ -132,7 +132,7 @@ def calculate_over_under(sales_row):
 def get_last_3_days_sales():
     """
     Collects columns of data from sales worksheet, collecting
-    the last 3 days worth of sales for each of/
+    the last 3 days worth of sales for each of
     the 6 Hot Products and returns the data
     as a list of lists.
     """
@@ -148,8 +148,8 @@ def get_last_3_days_sales():
 
 def calculate_daily_prep(data):
     """
-    Calculate the 3 day average stock for each item type, adding 5% /
-    to generate prep amounts for each of the 6 Hot Corner Products/
+    Calculate the 3 day average stock for each item type, adding 5% 
+    to generate prep amounts for each of the 6 Hot Corner Products
     rounding the result to the nearest whole number.
     """
     print("Generating product preparation totals...\n")
@@ -181,7 +181,7 @@ def get_last_2_weeks_sales():
 
 def calculate_fortnightly_order(data):
     """
-    Calculate the 14 day stock usage for each Hot Corner/
+    Calculate the 14 day stock usage for each Hot Corner
     product rounding the result to the nearest whole number.
     """
     print("Generating fornightly product order totals...\n")
